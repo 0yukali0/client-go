@@ -64,7 +64,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-        num := uint64(4)
+        num := uint64(50)
 	ResourceTypes = []string{"cpu", "memory"}
 	appsID = make(map[string]string, 0)
 	podsClient := clientset.CoreV1().Pods(apiv1.NamespaceDefault)
@@ -72,26 +72,26 @@ func main() {
 		tenant{
 			"user1",
 			num,
-			map[string]string{"cpu": "500", "memory": "10000000", "duration": "5"},
-			map[string]string{"cpu": "500m", "memory": "10M", "duration": "5"},
+			map[string]string{"cpu": "2000", "memory": "8000000000", "duration": "50"},
+			map[string]string{"cpu": "2", "memory": "8G", "duration": "50"},
 		},
 		tenant{
 			"user2",
 			num,
-			map[string]string{"cpu": "500", "memory": "10000000", "duration": "5"},
-			map[string]string{"cpu": "500m", "memory": "10M", "duration": "5"},
+			map[string]string{"cpu": "1000", "memory": "4000000000", "duration": "200"},
+			map[string]string{"cpu": "1", "memory": "4G", "duration": "200"},
 		},
 		tenant{
 			"user3",
 			num,
-			map[string]string{"cpu": "500", "memory": "10000000", "duration": "5"},
-			map[string]string{"cpu": "500m", "memory": "10M", "duration": "5"},
+			map[string]string{"cpu": "8000", "memory": "2000000000", "duration": "50"},
+			map[string]string{"cpu": "8", "memory": "2G", "duration": "50"},
 		},
 		tenant{
 			"user4",
 			num,
-			map[string]string{"cpu": "500", "memory": "10000000", "duration": "5"},
-			map[string]string{"cpu": "500m", "memory": "10M", "duration": "5"},
+			map[string]string{"cpu": "4000", "memory": "1000000000", "duration": "200"},
+			map[string]string{"cpu": "4", "memory": "1G", "duration": "200"},
 		},
 	}
 
